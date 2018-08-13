@@ -13,6 +13,7 @@
     </section>
     <skills></skills>
     <print></print>
+   
   </div>
 </template>
 
@@ -22,7 +23,6 @@ import UserCard from './components/UserCard'
 import Works from './components/Works'
 import Skills from './components/Skills'
 import Print from './components/Print'
-import IconGithub from './components/icons/IconGithub'
 export default {
   name: 'App',
   data(){
@@ -55,7 +55,7 @@ export default {
     Works,
     Skills,
     Print,
-    IconGithub
+    
   }
 }
 </script>

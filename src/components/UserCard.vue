@@ -43,7 +43,7 @@
     </main>
     </div>
 </template>
-<script src="//at.alicdn.com/t/font_587178_vwi2iocx42c.js"></script>
+<script src="https://at.alicdn.com/t/font_587178_vwi2iocx42c.js"></script>
 <script>
 import '../assets/common/common.css'
     export default{

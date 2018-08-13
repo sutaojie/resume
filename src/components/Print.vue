@@ -1,6 +1,6 @@
 <template>
     <div>
-     <div class="personal-info-print" style="display:none">
+     <div class="personal-info-print " >
             <h1 class="name">苏赵勇</h1>
             <p class="description">男，1995/11，大专(2014-2017)，安徽财贸大学，自学前端一年。</p>
             <ul class="contact">
@@ -12,42 +12,30 @@
                 </li>
                 <li>
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-QQ"></use>
-                    </svg>
-                    1522006120
-                </li>
-                <li>
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-weixin"></use>
-                    </svg>
-                    Coco-6120
-                </li>
-                <li>
-                    <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-youxiang"></use>
+                        <use xlink:href="#icon-duanxin"></use>
                     </svg>
                     sutaojie@163.com
                 </li>
                 <li>
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-blogger"></use>
+                        <use xlink:href="#icon-youji"></use>
                     </svg>
-                    https://sutaojie.github.io/
+                    https://github.com/sutaojie
                 </li>
                 <li>
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-GitHub"></use>
+                        <use xlink:href="#icon-dizhi"></use>
                     </svg>
-                    https://github.com/sutaojie
+                    上海闵行浦江121号
                 </li>
             </ul>
             <p class="online-resume">在线简历地址：###</p>
         </div>
         
 
-         <section class="download">
+         <section class="download" @click='printting'>
         <p class="downloadResume-wrapper">
-            <a class="downloadResume" href="./resume.pdf" download="前端工程师-苏赵勇-2018.pdf">下载简历</a>
+            <a class="downloadResume" href="./resume.pdf" download="前端工程师-苏赵勇-2018.pdf" >下载简历</a>
         </p>
     </section>
         </div>
@@ -55,12 +43,48 @@
 
 <script>
 import '../assets/common/print.css'
+import eventhub from '../assets/common/evenhub.js'
 export default{
+    data(){
+        return{
+            isPrintting:false
+        }
+    },
+    methods:{
+        printting(){
+            this.isPrintting = true
+            eventhub.$emit('isprint', this.isPrintting)
+        }
+    }
     
 }
 </script>
 
-<style>
+<style >
+ .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+
+.personal-info-print {
+  display: none;
+  line-height: 1.5;
+  border-bottom: 2px dashed #ddd;
+}
+.personal-info-print .name {
+  margin-bottom: 16px;
+}
+.personal-info-print .contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+.personal-info-print .contact > li {
+  width: 40%;
+  padding: 5px;
+}
+
 section.download {
   position: fixed;
   top: 50%;

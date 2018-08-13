@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+     <print></print>
    <top-nav-bar></top-nav-bar>
-    <div class="blank"></div>
     <user-card icon-name="write"><icon-github></icon-github></user-card>
    <section class="myPortfolio"  id="siteWorks">
         <div class="boundary">
@@ -12,7 +12,7 @@
         </div>
     </section>
     <skills></skills>
-    <print></print>
+   
    
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-     <div id="topNavBar" class='topNavBar'  :class='{sticky:scrolled}' @scroll="handleScroll" >
+     <div id="topNavBar" class='topNavBar '  :class='{sticky:scrolled, notPrint:isPrinting}' @scroll="handleScroll" >
         <div class="topNavBar-inner clearfix">
             <a class="logo" href="#" alt="logo" style="float:left;" v-for="item in logo">
                 <span :class="item.cls">{{item.chart}}</span>
@@ -17,6 +17,8 @@
 
 <script>
     import '../assets/common/common.css'
+    import '../assets/common/print.css'
+    import eventhub from '../assets/common/evenhub.js'
     export default{
         name:'topNavBar',
         data(){
@@ -28,11 +30,22 @@
                     {link:'#siteWorks', keyword:'作品'},
                     {link:'#siteSkills', keyword:'技能'},
                     {link:'#blog', keyword:'博客'},
-                ]
+                ],
+                isPrinting:false
             }
         },
         created(){
            window.addEventListener('scroll', this.handleScroll);
+
+              eventhub.$on('isprint',function(e){
+                   this.isPrinting = e
+                console.log(typeof this.isPrinting);
+                alert(this.isPrinting)
+              })
+            
+        },
+        mounted(){
+
         },
         methods:{
            handleScroll(){
@@ -41,15 +54,18 @@
   
         },
         computed:{
-            
+           
         },
         watch:{
-            
+           
         },
     }
 </script>
 
 <style>
+.notPrint {
+    display:none;
+}
 
 .topNavBar {
   padding: 20px 0 20px 0;

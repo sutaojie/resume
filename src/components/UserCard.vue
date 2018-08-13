@@ -1,6 +1,6 @@
 <template>
-<div class='display'>
-    <div class="banner" :class="{'notPrint':isPrint}">
+<div class='display '>
+    <div class="banner " :class="{'notPrint':isPrint}">
         <div class="mask "></div>
     </div>
     <main>
@@ -98,7 +98,7 @@ import '../assets/common/common.css'
     }
 </script>
 
-<style>
+<style scoped>
  .display{
     position: relative;
     

@@ -1,38 +1,31 @@
 <template>
-    <div class="section_body">
-                <section class="project">
+    <div class="section_body" v-if="works">
+                <section class="project" v-for="work in works">
                     <div class="project_intro">
                         <header class="project_intro_header clearfix">
-                            <h4 class="project_intro_header_title">多人共享博客<span> - a Multi-user blog</span></h4>
-                            <ul class="tech-tag-list">
-                                <li class="tech-tag-list_item tech-tag-list_item-vue-cli">vue-cli</li>
-                                <li class="tech-tag-list_item tech-tag-list_item-vue">vue2</li>
-                                <li class="tech-tag-list_item tech-tag-list_item-axios">axios</li>
-                                <li class="tech-tag-list_item tech-tag-list_item-vue-router">vue-router</li>
-                                <li class="tech-tag-list_item tech-tag-list_item-vuex">vuex</li>
-                                <li class="tech-tag-list_item tech-tag-list_item-es6">es6</li>
-                                <li class="tech-tag-list_item tech-tag-list_item-npm">npm</li>
+                            <h4 class="project_intro_header_title">{{work.titles.mainTitle}}<span>{{work.titles.subTitle}}</span></h4>
+                            <ul class="tech-tag-list" >
+                                <li :class="'tech-tag-list_item tech-tag-list_item-'+tag.toLowerCase()" v-for="tag in work.tags">{{tag}}</li>
+                                
                                 <!--<li class="tech-tag-list_item tech-tag-list_item-jQuery">jQuery</li>-->
 
                             </ul>
                         </header>
                         <div class="project_intro_header_content">
                             <p>
-                                基于vue技术栈，做一款多人共享博客的单页应用，实现以下功能：
+                               {{work.describe}}
                             </p>
-                            <ul class="list">
-                                <li>用户的登录、注册、注销功能。</li>
-                                <li>首页多人博客列表展示与用户博客列表展示。</li>
-                                <li>个人博客管理:创建、编辑、删除与发布。</li>
+                            <ul class="list"  v-if='work.todos.length'>
+                                <li v-for="todo in work.todos" :key='todo.id'>{{todo}}</li>
                             </ul>
-                            <p class="project_intro_links">
-                                <a href="https://littlebirdflying.github.io/multi-user-blog/dist/#/" target="_blank">预览地址</a>
-                                <a href="https://github.com/littlebirdflying/multi-user-blog" target="_blank">源码地址</a>
+                            <p class="project_intro_links" >
+                                <a :href="work.projectLinks.view" target="_blank">预览地址</a>
+                                <a :href="work.projectLinks.code" target="_blank">源码地址</a>
                             </p>
                         </div>
                     </div>
                     <div class="project_thumb">
-                        <img :src="imgUrl" alt="导航栏">
+                        <img :src="work.imgUrl" :alt="work.imgDescribe">
                     </div>
                 </section>
                 <!--  -->
@@ -41,14 +34,30 @@
 
 <script>
     export default{
+        props:{
+            works:{
+                type:Array
+            }
+        },
         data(){
             return{
                 imgUrl:''
             }
         },
         created(){
-            this.imgUrl=require('../assets/img/works/multi-user-blog.jpg')
+            
+            
+        },
+        mounted(){
+           
+        },
+        watch:{
+            imgUrl(val, oldVal){
+                console.log(val);
+                
+            }
         }
+        
     }
 </script>
 
@@ -89,6 +98,7 @@
   font-size: 0.75em;
   font-family: 'Lucida Grande', arial;
   color: #fff;
+  margin:0 3px;
 }
 .boundary .section_body .project .project_intro .project_intro_header_content {
   line-height: 1.7;
@@ -124,12 +134,10 @@ section.message > ol > li {
   border-bottom: 1px solid #DDD;
 }
 
-
-
-.tech-tag-list_item-html {
+.tech-tag-list_item-html5 {
   background: #f60;
 }
-.tech-tag-list_item-css {
+.tech-tag-list_item-css3 {
   background: #f90;
 }
 .tech-tag-list_item-javascript {

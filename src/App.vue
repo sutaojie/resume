@@ -1,16 +1,19 @@
 <template>
   <div id="app">
    <TopNavBar></TopNavBar>
-   <div id="a"></div>
+    <UserCard></UserCard>
+   
   </div>
 </template>
 
 <script>
 import TopNavBar from './components/TopNavBar'
+import UserCard from './components/UserCard'
 export default {
   name: 'App',
   components:{
-    TopNavBar
+    TopNavBar,
+    UserCard
   }
 }
 </script>

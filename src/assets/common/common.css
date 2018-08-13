@@ -35,3 +35,15 @@ body {
     display: block;
     clear: both;
   }
+
+
+  [data-x].active {
+    outline: 1px solid red;
+  }
+  [data-x].offset {
+    transform: translateY(100px);
+  }
+  [data-x] {
+    transform: translateY(0);
+    transition: all 0.5s;
+  }

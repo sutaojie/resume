@@ -117,7 +117,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 
 section.skills,
 section.portfolio {

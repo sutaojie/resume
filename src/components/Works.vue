@@ -61,7 +61,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 
 .boundary .section_body .project {
   border-top: 2px dashed #ccc;

@@ -62,7 +62,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 .notPrint {
     display:none;
 }

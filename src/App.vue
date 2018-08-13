@@ -11,6 +11,7 @@
             <Works :works='workLists'></Works>
         </div>
     </section>
+    <Skills></Skills>
   </div>
 </template>
 
@@ -18,6 +19,7 @@
 import TopNavBar from './components/TopNavBar'
 import UserCard from './components/UserCard'
 import Works from './components/Works'
+import Skills from './components/Skills'
 export default {
   name: 'App',
   data(){
@@ -47,7 +49,8 @@ export default {
   components:{
     TopNavBar,
     UserCard,
-    Works
+    Works,
+    Skills
   }
 }
 </script>

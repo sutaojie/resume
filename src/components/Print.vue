@@ -29,7 +29,7 @@
                     上海闵行浦江121号
                 </li>
             </ul>
-            <p class="online-resume">在线简历地址：###</p>
+            <p class="online-resume">在线简历地址：https://sutaojie.github.io/resume/dist/index.html</p>
         </div>
         
 

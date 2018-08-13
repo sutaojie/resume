@@ -2,7 +2,7 @@
   <div id="app">
      <print></print>
    <top-nav-bar></top-nav-bar>
-    <user-card icon-name="write"><icon-github></icon-github></user-card>
+    <user-card ></user-card>
    <section class="myPortfolio"  id="siteWorks">
         <div class="boundary">
             <header class="section_header">

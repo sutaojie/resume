@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+   <TopNavBar></TopNavBar>
+   <div id="a"></div>
   </div>
 </template>
 
 <script>
+import TopNavBar from './components/TopNavBar'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    TopNavBar
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#a{
+  height: 1000px;
+  overflow: auto;
 }
 </style>

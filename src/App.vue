@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-   <TopNavBar></TopNavBar>
+   <top-nav-bar></top-nav-bar>
     <div class="blank"></div>
-    <UserCard></UserCard>
+    <user-card icon-name="write"><icon-github></icon-github></user-card>
    <section class="myPortfolio"  id="siteWorks">
         <div class="boundary">
             <header class="section_header">
                 <h2 class="section_header_title">项目经历</h2>
             </header>
-            <Works :works='workLists'></Works>
+            <works :works='workLists'></works>
         </div>
     </section>
-    <Skills></Skills>
+    <skills></skills>
+    <print></print>
   </div>
 </template>
 
@@ -20,6 +21,8 @@ import TopNavBar from './components/TopNavBar'
 import UserCard from './components/UserCard'
 import Works from './components/Works'
 import Skills from './components/Skills'
+import Print from './components/Print'
+import IconGithub from './components/icons/IconGithub'
 export default {
   name: 'App',
   data(){
@@ -50,7 +53,9 @@ export default {
     TopNavBar,
     UserCard,
     Works,
-    Skills
+    Skills,
+    Print,
+    IconGithub
   }
 }
 </script>

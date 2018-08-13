@@ -27,10 +27,13 @@
                 </div>
             </div>
             <footer class="media">
-                <a  v-for="media in personalInfo.medias" :href="media.link" target="_blank" :title="media.context">
-                    <svg class="icon" aria-hidden="true">
-                        <use :xlink:href="'#icon-'+media.icon"></use>
-                    </svg>
+                <a   class="icon" v-for="media in personalInfo.medias" :href="media.link" target="_blank" :title="media.context">
+                   <!-- <a href="#"> -->
+                         <svg :width="width" :height="height" viewBox="0 0 500 500" :aria-labelledby="iconName" 
+                                role="presentation" xmlns="http://www.w3.org/2000/svg">
+                            <slot/>
+                         </svg>
+                    
                 </a>
                
             </footer>
@@ -46,6 +49,24 @@
 <script>
 import '../assets/common/common.css'
     export default{
+         props: {
+            iconName: {
+                type: String,
+                default: 'box'
+            },
+            width: {
+                type: [Number, String],
+                // default: 48
+            },
+            height: {
+                type: [Number, String],
+                // default: 48
+            },
+            iconColor: {
+                type: String,
+                default: 'currentColor'
+            }
+        },
         data(){
             return{
                 isPrint:false,
@@ -92,8 +113,8 @@ main{
     transform: translate(-50%,0%);
 } */
 .icon {
-  width: 1em;
-  height: 1em;
+  width: 40px;
+  height: 40px;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -178,24 +199,27 @@ main{
   background: #7E6EFC;
   text-align: center;
 }
-.userCard > footer.media > a {
+.userCard > footer.media > a.icon {
   /* border: 1px solid black; */
   display: inline-block;
   width: 40px;
-  padding: 5px 0;
+
+  /* padding: 5px 0; */
   /*不写height加好办了*/
-  line-height: 30px;
+  line-height: 40px;
   border-radius: 50%;
   margin: 16px;
 }
 .userCard > footer.media > a:hover {
+    /* width: 40px;
+    height: 40px; */
+    
   background: #CF5D5F;
 }
 .userCard svg {
-  width: 30px;
-  height: 30px;
-  fill: white;
-  vertical-align: top;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-bottom: -2px; /* yes, I'm that particular about formatting */
 }
 
 </style>

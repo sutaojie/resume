@@ -1,5 +1,5 @@
 <template>
-     <div id="topNavBar" class='topNavBar notPrint'  :class='{sticky:scrolled}' @scroll="handleScroll" >
+     <div id="topNavBar" class='topNavBar'  :class='{sticky:scrolled}' @scroll="handleScroll" >
         <div class="topNavBar-inner clearfix">
             <a class="logo" href="#" alt="logo" style="float:left;" v-for="item in logo">
                 <span :class="item.cls">{{item.chart}}</span>

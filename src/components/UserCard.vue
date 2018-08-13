@@ -28,11 +28,9 @@
             </div>
             <footer class="media">
                 <a   class="icon" v-for="media in personalInfo.medias" :href="media.link" target="_blank" :title="media.context">
-                   <!-- <a href="#"> -->
-                         <svg :width="width" :height="height" viewBox="0 0 500 500" :aria-labelledby="iconName" 
-                                role="presentation" xmlns="http://www.w3.org/2000/svg">
-                            <slot/>
-                         </svg>
+                    <svg class="icon" aria-hidden="true">
+                        <use :xlink:href="'#icon-'+media.icon"></use>
+                    </svg>
                     
                 </a>
                
@@ -84,8 +82,8 @@ import '../assets/common/common.css'
                     medias:[
                         {link:'#' , context:'github', icon:'github'},
                         {link:'#' , context:'知乎', icon:'zhihu'},
-                        {link:'#' , context:'csdn', icon:'CN_csdnnet'},
-                        {link:'#' , context:'简书', icon:'CN_jianshu'},
+                        {link:'#' , context:'eamil', icon:'email'},
+                        
                     ]
                 }
             }
@@ -112,13 +110,12 @@ main{
     left: 50%;
     transform: translate(-50%,0%);
 } */
-.icon {
-  width: 40px;
-  height: 40px;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
+    .icon {
+       width: 40px; height: 40px;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
 .banner {
   height: 515px;
   /* background-image: url(img/rs-cover-2-2-1-1.jpg); */
@@ -199,12 +196,12 @@ main{
   background: #7E6EFC;
   text-align: center;
 }
-.userCard > footer.media > a.icon {
+.userCard > footer.media > a {
   /* border: 1px solid black; */
   display: inline-block;
-  width: 40px;
+  width: 50px;
 
-  /* padding: 5px 0; */
+  padding: 5px 0;
   /*不写height加好办了*/
   line-height: 40px;
   border-radius: 50%;

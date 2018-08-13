@@ -116,7 +116,7 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
     min-width: 940px;
-    margin-top: 100px;
+    margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFF;

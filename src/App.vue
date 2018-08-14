@@ -73,7 +73,7 @@ export default {
             imgUrl:require('./assets/img/works/canvas.jpg'),
             imgDescribe:'在线画板'
           },
-      ]
+      ],
     }
   },
   components:{

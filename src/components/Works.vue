@@ -147,7 +147,7 @@ section.message > ol > li {
 .tech-tag-list_item-nodejs {
   background: #80bd01;
 }
-.tech-tag-list_item-jQuery {
+.tech-tag-list_item-jquery {
   background: #015a84;
 }
 .tech-tag-list_item-vue {
@@ -171,7 +171,7 @@ section.message > ol > li {
 .tech-tag-list_item-npm {
   background: #f5a573;
 }
-.tech-tag-list_item-lean-cloud {
+.tech-tag-list_item-leancloud {
   background: #3b4f40;
 }
 .tech-tag-list_item-qiniu {

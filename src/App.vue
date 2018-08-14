@@ -29,23 +29,50 @@ export default {
     return{
       workLists:[
           {
-            titles:{mainTitle:'多人共享博客' , subTitle:'- a Multi-user blog'},
-            tags:['vue-cli', 'vue', 'axios', 'vue-router', 'vuex', 'es6', 'npm'],
-            describe:'基于vue技术栈，做一款多人共享博客的单页应用，实现以下功能：',
-            todos:['用户的登录、注册、注销功能。', '首页多人博客列表展示与用户博客列表展示。', '个人博客管理:创建、编辑、删除与发布。'],
-            projectLinks:{view:'###', code:'#'},
-            imgUrl:require('./assets/img/works/multi-user-blog.jpg'),
-            imgDescribe:'导航栏'
+            titles:{mainTitle:'网易云播放器' , subTitle:'- a Netease cloud player'},
+            tags:['jQuery', 'html5', 'css3', 'javascript', 'leancloud', 'qiniu', 'npm'],
+            describe:'基于jQuery技术栈，以LeanCloud和QiNiu为数据库，完成一个移动端网易云播放器，实现以下功能：',
+            todos:['展示歌曲列表、展示热歌榜歌曲、搜索歌曲。', '歌曲播放、暂停、歌词展示。', '搭建后台管理系统，实现歌曲新建、添加、编辑、删除。'],
+            projectLinks:{view:'https://sutaojie.github.io/163music/src/index.html', code:'https://github.com/sutaojie/163music/tree/master/src/'},
+            imgUrl:require('./assets/img/works/music.jpg'),
+            imgDescribe:'网易云播放器'
           },
           {
-            titles:{mainTitle:'在线简历编辑器', subTitle:'- a shareable resume-editor online'},
-            tags:['HTML5', 'CSS3', 'JavaScript', 'Vue', 'LeanCloud'],
-            describe:'基于vue技术栈，以LeanCloud为数据库，完成一个可分享的在线简历编辑器，实现以下功能：',
-            todos:[' 用户的登录、注册、注销功能。', '信息区、技能区、项目区的可编辑功能。', '编辑器的保存、分享、打印、换肤功能。'],
-            projectLinks:{view:'###', code:'#'},
-            imgUrl:require('./assets/img/works/multi-user-blog.jpg'),
-            imgDescribe:'简历编辑器'
-          }
+            titles:{mainTitle:'小黄人', subTitle:'- code a Minion for you'},
+            tags:['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
+            describe:'基于 jQuery，动态向 style 标签添加样式以及 pre 标签添加文本，模拟css绘制小黄人的过程，主要功能有：',
+            todos:[' 同时显示style代码和绘画过程。', '增加播放代码速度调节按钮。', '适配手机端。'],
+            projectLinks:{view:'https://sutaojie.github.io/cartoon/index.html', code:'https://github.com/sutaojie/cartoon'},
+            imgUrl:require('./assets/img/works/Minion.jpg'),
+            imgDescribe:'小黄人'
+          },
+          {
+            titles:{mainTitle:'快捷导航', subTitle:'-a Quick Navigation Page'},
+            tags:['HTML5', 'CSS3', 'JavaScript'],
+            describe:'基于原生 JavaScript 结合 localStorage 在线存储功能，动态生成一个优美快捷的个人导航页。实现以下功能：',
+            todos:[' 键盘快捷导航功能,敲击键盘字母跳转到绑定导航网址。', '导航键编辑导航地址功能。', '主流搜索引擎搜索功能。'],
+            projectLinks:{view:'https://sutaojie.github.io/navigator-demo/index.html', code:'https://github.com/sutaojie/navigator-demo'},
+            imgUrl:require('./assets/img/works/nav-page.jpg'),
+            imgDescribe:'快捷导航'
+          },
+          {
+            titles:{mainTitle:'会动的简历', subTitle:'- make your resume active'},
+            tags:['HTML5', 'CSS3', 'JavaScript'],
+            describe:'基于原生 JavaScript 和 CCS 3，动态向 style 标签添加样式以及 pre 标签添加文本，利用 prism.js 实现代码高亮,使简历生动起来。',
+            todos:[],
+            projectLinks:{view:'https://sutaojie.github.io/play-resume/index.html', code:'https://github.com/sutaojie/play-resume'},
+            imgUrl:require('./assets/img/works/animation-resume.jpg'),
+            imgDescribe:'会动的简历'
+          },
+           {
+            titles:{mainTitle:'smart 在线画板', subTitle:'- Draw anything your want'},
+            tags:['HTML5', 'CSS3', 'JavaScript'],
+            describe:'基于原生 JavaScript 与 canvas 实现的在线画板，主要功能有：',
+            todos:['实现任意选择颜色、画笔类型以及擦除等绘画功能。', '实现在线画板的本地保存功能。', '支持手机在线绘画功能。'],
+            projectLinks:{view:'https://sutaojie.github.io/canvas-demo/index.html', code:'https://github.com/sutaojie/canvas-demo'},
+            imgUrl:require('./assets/img/works/canvas.jpg'),
+            imgDescribe:'在线画板'
+          },
       ]
     }
   },

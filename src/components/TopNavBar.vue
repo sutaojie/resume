@@ -24,12 +24,12 @@
         data(){
             return {
                 scrolled:false,
-                logo:[{ cls:'rs', chart:'S' }, { cls:'card', chart:'TJ' }],
+                logo:[{ cls:'rs', chart:'S' }, { cls:'card', chart:'ZY' }],
                 menuList:[
                     {link:'#siteAbout', keyword:'关于'},
                     {link:'#siteWorks', keyword:'作品'},
                     {link:'#siteSkills', keyword:'技能'},
-                    {link:'#blog', keyword:'博客'},
+                    // {link:'#blog', keyword:'博客'},
                 ],
                 isPrinting:false
             }

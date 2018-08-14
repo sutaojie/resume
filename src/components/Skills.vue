@@ -50,7 +50,8 @@
                     {
                         keyname:'jQuery',
                         describe:[
-                            '熟悉 jQuery 的常用 API，能使用 jQuery 技术栈进行网站开发。'
+                            '熟悉 jQuery 的常用 API，能使用 jQuery 技术栈进行网站开发。',
+                            
                         ]
                     },
                     {
@@ -172,6 +173,7 @@ section.skills .tech-stack > ul > li li {
 
 
 .circle {
+    /* display: none; */
   height: 14px;
   width: 14px;
   -webkit-border-radius: 100%;

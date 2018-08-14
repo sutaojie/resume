@@ -1,6 +1,6 @@
 <template>
     <div>
-     <div class="personal-info-print " >
+     <div class="personal-info-print "  >
             <h1 class="name">苏赵勇</h1>
             <p class="description">男，1995/11，大专(2014-2017)，安徽财贸大学，自学前端一年。</p>
             <ul class="contact">
@@ -35,7 +35,7 @@
 
          <section class="download" @click='printting'>
         <p class="downloadResume-wrapper">
-            <a class="downloadResume" href="./resume.pdf" download="前端工程师-苏赵勇-2018.pdf" >下载简历</a>
+            <a class="downloadResume" href="#" download="苏赵勇个人简历_Web前端开发工程师.pdf" >下载简历</a>
         </p>
     </section>
         </div>
@@ -44,16 +44,26 @@
 <script>
 import '../assets/common/print.css'
 import eventhub from '../assets/common/evenhub.js'
+
 export default{
     data(){
         return{
-            isPrintting:false
+            isPrintting:false,
+            pdffile:''
         }
+    },
+    created(){
+        
+      
+    },
+    mounted(){
+          
     },
     methods:{
         printting(){
             this.isPrintting = true
-            eventhub.$emit('isprint', this.isPrintting)
+            // eventhub.$emit('isprint', this.isPrintting)
+          
         }
     }
     
@@ -70,6 +80,7 @@ export default{
 
 .personal-info-print {
   display: none;
+
   line-height: 1.5;
   border-bottom: 2px dashed #ddd;
 }

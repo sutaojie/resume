@@ -80,9 +80,9 @@ import '../assets/common/common.css'
                         {keyword:'Gmail 邮箱' , context:'sutaojie@gmail.com'},
                     ],
                     medias:[
-                        {link:'#' , context:'github', icon:'github'},
-                        {link:'#' , context:'知乎', icon:'zhihu'},
-                        {link:'#' , context:'eamil', icon:'email'},
+                        {link:'https://github.com/sutaojie' , context:'github', icon:'github'},
+                        // {link:'#' , context:'知乎', icon:'zhihu'},
+                        // {link:'sutaojie@gmail.com' , context:'eamil', icon:'email'},
                         
                     ]
                 }

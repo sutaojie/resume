@@ -29,6 +29,15 @@ export default {
     return{
       workLists:[
           {
+            titles:{mainTitle:'优品商城' , subTitle:'- a mobile phone goods-shop'},
+            tags:['Vue', 'Vuex', 'Vue-router', 'Vue-cli', 'javascript', 'npm'],
+            describe:'基于Vue + Vue-router + Vuex技术栈，使用 Mock 数据来重构商城的项目，实现以下功能：',
+            todos:['展示商品列表、展示热门商品、展示商品详情。', '购物车的购买，删除等操作。', '个人地址的管理及路由的跳转等'],
+            projectLinks:{view:'#', code:'https://github.com/sutaojie/U-zhan-1/'},
+            imgUrl:require('./assets/img/works/shop.jpg'),
+            imgDescribe:'优品商城'
+          },
+          {
             titles:{mainTitle:'网易云播放器' , subTitle:'- a Netease cloud player'},
             tags:['jQuery', 'html5', 'css3', 'javascript', 'leancloud', 'qiniu', 'npm'],
             describe:'基于jQuery技术栈，以LeanCloud和QiNiu为数据库，完成一个移动端网易云播放器，实现以下功能：',

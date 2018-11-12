@@ -1,6 +1,5 @@
 # resume
 
-> 预览链接 https://sutaojie.github.io/resume/dist/index.html
 
 ## Build Setup
 
